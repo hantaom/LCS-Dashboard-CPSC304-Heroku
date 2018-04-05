@@ -1,0 +1,10 @@
+.inputValues {
+    -webkit-align-content: left;
+    align-content: left;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+p {
+    text-align: left;
+}

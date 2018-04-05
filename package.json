@@ -1,0 +1,19 @@
+{
+  "name": "LCS-Dashboard-CPSC304",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hantaom/LCS-Dashboard-CPSC304.git",
+  "author": "hantaom <hantaom@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "password-generator": "^2.2.0",
+    "pg": "^7.4.1",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
+  }
+}
