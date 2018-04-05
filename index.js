@@ -22,14 +22,15 @@ const client = new pg.Client({
 
 client.connect();
 const qh = new QueryHandler(client);
-qh.getAndParsePlayerStats();
+// qh.getAndParsePlayerStats();
 
 // Express code
 // ######################################################################################################
 const app = express();
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '/../client/build')));
+// app.use(express.static(path.join(__dirname, '/../client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Query endpoint to send the query results
 app.get('/api/temp', (req, res) => {
@@ -62,7 +63,8 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
-const port = process.env.PORT || 5000;
+
+const port = process.env.PORT || 5001;
 app.listen(port);
 
 console.log(`Query Server listening on port: ${port}`);
